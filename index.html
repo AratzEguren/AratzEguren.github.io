@@ -8,8 +8,11 @@
 </head>
 <body>
 
+<!-- Botón para desplegar la barra lateral en pantallas pequeñas -->
+<button class="toggle-button" id="toggleSidebar">&#9776;</button>
+
 <div class="container">
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
         <h1>Aratz Eguren Zarraga</h1>
         <img src="Aratz.jpg" alt="Foto de Aratz Eguren Zarraga" width="150">
         <h2>Índice</h2>
@@ -36,41 +39,36 @@
 
         <div>
             <h2>Trabajos</h2>
-
             <div class="project" id="sanrio">
                 <h3>Sanrio</h3>
-				<div class="description">
+                <div class="description">
                     <p>Un proyecto basado en la creación de una interfaz gráfica para gestionar productos y usuarios en una tienda online.</p>
                 </div>
                 <img src="Sanrio.png" alt="Sanrio">
-                
             </div>
 
             <div class="project" id="palpact">
                 <h3>Palpact</h3>
-				 <div class="description">
+                <div class="description">
                     <p>Aplicación para la gestión de servicios y disponibilidad de profesionales sin interfaz gráfica.</p>
                 </div>
                 <img src="Palpact.png" alt="Palpact">
-               
             </div>
 
             <div class="project" id="mario">
                 <h3>Mario</h3>
-				<div class="description">
+                <div class="description">
                     <p>Una Web informativa sobre el mundo de Super Mario.</p>
                 </div>
                 <img src="imagen_mario.jpg" alt="Error, la imagen no ha podido ser cargada.">
-                
             </div>
 
             <div class="project" id="moda">
                 <h3>Moda</h3>
-				<div class="description">
+                <div class="description">
                     <p>Una web informativa sobre tres importantes diseñadores que causaron gran impacto en la moda.</p>
                 </div>
                 <img src="imagen_moda.jpg" alt="Error, la imagen no ha podido ser cargada.">
-                
             </div>
         </div>
     </div>
@@ -81,6 +79,8 @@
     <p>Teléfono: +34 644 742 004</p>
     <p>Email: <a href="mailto:egurenaratz@gmail.com">egurenaratz@gmail.com</a></p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
