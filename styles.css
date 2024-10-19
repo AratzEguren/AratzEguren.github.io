@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -8,6 +10,20 @@ body {
 .container {
     display: flex;
     min-height: 100vh;
+}
+
+.toggle-button {
+    display: none; /* Oculta el botón por defecto */
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+    font-size: 24px;
+    background-color: #3A6D8C; /* Azul grisáceo */
+    color: #EAD8B1; /* Texto beige claro */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .sidebar {
@@ -25,11 +41,11 @@ body {
     align-items: center;
     justify-content: flex-start;
     z-index: 100;
-    transition: transform 0.3s ease; /* Para el efecto al ocultar/mostrar */
+    transition: transform 0.3s ease;
 }
 
 .sidebar.closed {
-    transform: translateX(-100%);
+    transform: translateX(-100%); /* Mueve la barra lateral fuera de la pantalla */
 }
 
 .sidebar h1 {
@@ -45,8 +61,8 @@ body {
 
 .sidebar h2 {
     font-size: 22px;
-	text-decoration: underline;
-	margin-bottom: -10px;
+    text-decoration: underline;
+    margin-bottom: -10px;
 }
 
 .sidebar ul {
@@ -100,56 +116,102 @@ body {
 }
 
 .project img {
-    max-width: 300px;
+    max-width: 200px; /* Ajusta el tamaño máximo de las imágenes */
     height: auto;
     border: 1px solid #6A9AB0; /* Azul suave */
     border-radius: 5px;
     margin-bottom: 10px;
 }
 
+.description {
+    flex-grow: 1;
+}
+
+.description h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #001F3F; /* Azul oscuro */
+}
+
+.description p {
+    font-size: 16px;
+    color: #555; /* Gris oscuro */
+}
+
 footer {
-    background-color: #001F3F;
-    color: #EAD8B1;
+    background-color: #001F3F; /* Azul oscuro */
+    color: #EAD8B1; /* Texto beige claro */
     text-align: center;
     padding: 10px;
     width: 100%;
     position: relative;
 }
 
-/* Botón para mostrar/ocultar la barra lateral */
-.toggle-button {
-    display: none;
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 101;
-    background-color: #001F3F;
-    color: #EAD8B1;
-    border: none;
-    font-size: 30px;
-    cursor: pointer;
+a {
+    color: #F6EFBD; /* Azul grisáceo */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #E4C087; /* Azul suave */
+    text-decoration: underline;
+}
+
+a:active {
+    color: #001F3F; /* Azul oscuro */
+}
+
+a:visited {
+    color: #6A9AB0; /* Azul suave */
 }
 
 /* Diseño para pantallas pequeñas */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 250px;
-        height: 100vh;
-        position: fixed;
-        left: 0;
-        top: 0;
-        transform: translateX(-100%);
+    .toggle-button {
+        display: block; /* Muestra el botón en pantallas pequeñas */
     }
 
     .content {
         margin-left: 0;
+        padding: 10px;
     }
 
-    .toggle-button {
-        display: block;
+    .sticky {
+        font-size: 40px;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .project img {
+        max-width: 100%; /* Mantiene el tamaño de las imágenes en pantallas pequeñas */
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+/* Diseño para pantallas muy pequeñas (teléfonos) */
+@media (max-width: 480px) {
+    .sidebar h1 {
+        font-size: 18px;
+    }
+
+    .sidebar h2 {
+        font-size: 16px;
+    }
+
+    .sticky {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .description p {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 8px;
     }
 }

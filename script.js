@@ -1,4 +1,4 @@
 document.getElementById('toggleSidebar').addEventListener('click', function() {
-    const sidebar = document.getElementById('sidebar');
+    const sidebar = document.querySelector('.sidebar');
     sidebar.classList.toggle('closed');
 });
