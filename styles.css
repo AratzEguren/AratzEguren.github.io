@@ -154,3 +154,64 @@ a:visited {
     align-items: flex-start;
     scroll-margin-top: 100px; /* Ajusta este valor para controlar la distancia desde la parte superior */
 }
+/* Diseño para pantallas pequeñas */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 10px;
+    }
+
+    .sidebar img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .content {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .sticky {
+        font-size: 40px;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .project img {
+        max-width: 100%;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+/* Diseño para pantallas muy pequeñas (teléfonos) */
+@media (max-width: 480px) {
+    .sidebar h1 {
+        font-size: 18px;
+    }
+
+    .sidebar h2 {
+        font-size: 16px;
+    }
+
+    .sticky {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .description p {
+        font-size: 14px;
+    }
+
+    footer {
+        padding: 8px;
+    }
+}
