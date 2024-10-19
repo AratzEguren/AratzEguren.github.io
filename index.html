@@ -1,108 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles.css">
     <title>Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-        }
-        h2 {
-            color: #333;
-        }
-        .skills ul, .projects ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .skills li, .projects li {
-            background-color: #f4f4f4;
-            margin: 10px 0;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
-        .contact-info {
-            margin-top: 20px;
-        }
-        .contact-info a {
-            color: #333;
-            text-decoration: none;
-        }
-    </style>
 </head>
 <body>
-    <header>
-        <h1>Your Name</h1>
-        <p>Web Developer | Designer | Programmer</p>
-    </header>
 
-    <section class="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm a web developer with a passion for creating beautiful and functional websites. I enjoy solving problems and learning new technologies. Below are some of the skills and projects I've worked on.</p>
-    </section>
-
-    <section class="skills">
-        <h2>Skills</h2>
+<div class="container">
+    <div class="sidebar">
+        <h1>Aratz Eguren Zarraga</h1>
+        <img src="Aratz.jpg" alt="Foto de Aratz Eguren Zarraga" width="150">
+        <h2>Índice</h2>
         <ul>
-            <li>HTML5 & CSS3</li>
-            <li>JavaScript & jQuery</li>
-            <li>React & Angular</li>
-            <li>Node.js & Express</li>
-            <li>Python & Django</li>
-            <li>SQL & NoSQL Databases</li>
-        </ul>
-    </section>
-
-    <section class="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <strong>Project 1:</strong> Portfolio Website
-                <p>A personal portfolio website to showcase my skills and projects.</p>
+            <li><strong>Java</strong>
+                <ul>
+                    <li><a href="#sanrio">Sanrio</a></li>
+                    <li><a href="#palpact">Palpact</a></li>
+                </ul>
             </li>
-            <li>
-                <strong>Project 2:</strong> E-commerce Site
-                <p>An e-commerce platform built with React and Node.js.</p>
-            </li>
-            <li>
-                <strong>Project 3:</strong> Blog Application
-                <p>A blog platform where users can create and share posts, built with Django.</p>
+            <li><strong>Web</strong>
+                <ul>
+                    <li><a href="#mario">Mario</a></li>
+                    <li><a href="#moda">Moda</a></li>
+                </ul>
             </li>
         </ul>
-    </section>
+    </div>
 
-    <section class="contact-info">
-        <h2>Contact</h2>
-        <p>If you'd like to get in touch, feel free to contact me through the following:</p>
-        <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn Profile</a></p>
-        <p>GitHub: <a href="https://github.com/yourusername" target="_blank">GitHub Profile</a></p>
-    </section>
+    <div class="content">
+        <hr class="separator">
+        <h1 class="sticky">Portfolio</h1>
+        <hr class="separator">
 
-    <footer>
-        <p>&copy; 2024 Your Name</p>
-    </footer>
+        <div>
+            <h2>Trabajos</h2>
+
+            <div class="project" id="sanrio">
+                <h3>Sanrio</h3>
+				<div class="description">
+                    <p>Un proyecto basado en la creación de una interfaz gráfica para gestionar productos y usuarios en una tienda online.</p>
+                </div>
+                <img src="Sanrio.png" alt="Sanrio">
+                
+            </div>
+
+            <div class="project" id="palpact">
+                <h3>Palpact</h3>
+				 <div class="description">
+                    <p>Aplicación para la gestión de servicios y disponibilidad de profesionales sin interfaz gráfica.</p>
+                </div>
+                <img src="Palpact.png" alt="Palpact">
+               
+            </div>
+
+            <div class="project" id="mario">
+                <h3>Mario</h3>
+				<div class="description">
+                    <p>Una Web informativa sobre el mundo de Super Mario.</p>
+                </div>
+                <img src="imagen_mario.jpg" alt="Error, la imagen no ha podido ser cargada.">
+                
+            </div>
+
+            <div class="project" id="moda">
+                <h3>Moda</h3>
+				<div class="description">
+                    <p>Una web informativa sobre tres importantes diseñadores que causaron gran impacto en la moda.</p>
+                </div>
+                <img src="imagen_moda.jpg" alt="Error, la imagen no ha podido ser cargada.">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>Contacto: Aratz Eguren Zarraga</p>
+    <p>Teléfono: +34 644 742 004</p>
+    <p>Email: <a href="mailto:egurenaratz@gmail.com">egurenaratz@gmail.com</a></p>
+</footer>
+
 </body>
 </html>
