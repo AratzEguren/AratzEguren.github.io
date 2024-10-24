@@ -211,7 +211,7 @@
 
 		.sticky {
 			position: sticky;
-			top: 100px;
+			top: -10px;
 			background-color: #3A6D8C;
 			color: #EAD8B1;
 			padding: 10px 20px;
