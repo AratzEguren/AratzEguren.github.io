@@ -13,9 +13,9 @@ body {
 }
 
 .toggle-button {
-    display: none; /* El botón solo se muestra en pantallas pequeñas */
+    display: none;
     position: fixed;
-    top: 50px; /* Cambia '10px' por '50px' o la posición que prefieras */
+    top: 50px; 
     left: 10px;
     z-index: 100;
     font-size: 24px;
@@ -30,8 +30,8 @@ body {
 .sidebar {
     width: 250px;
     padding: 20px;
-    background-color: #001F3F; /* Azul oscuro */
-    color: #EAD8B1; /* Texto beige claro */
+    background-color: #001F3F;
+    color: #EAD8B1;
     box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
     height: 100vh;
     position: fixed;
@@ -46,7 +46,7 @@ body {
 }
 
 .sidebar.closed {
-    transform: translateX(-100%); /* Oculta la barra lateral */
+    transform: translateX(-100%);
 }
 
 .sidebar h1 {
@@ -167,19 +167,19 @@ a:visited {
     color: #6A9AB0;
 }
 
-/* Diseño para pantallas pequeñas */
+
 @media (max-width: 1024px) {
     .toggle-button {
-        display: block; /* Muestra el botón en pantallas pequeñas */
+        display: block; 
 		 z-index: 2000;
     }
 
     .sidebar {
-        transform: translateX(-100%); /* Oculta la barra por defecto en pantallas pequeñas */
+        transform: translateX(-100%);
     }
 
     .sidebar.closed {
-        transform: translateX(0); /* Muestra la barra cuando el toggle está activo */
+        transform: translateX(0); 
     }
 
     .content {
@@ -203,18 +203,27 @@ a:visited {
 }
 @media (max-width: 768px) {
     .toggle-button {
-        display: block;
-background-color:red;		/* Mostrar el botón en pantallas pequeñas */
+        display: block
 		 z-index: 2000;
     }
 
-    /* Ajustar la barra lateral */
+.sticky {
+    position: sticky;
+    top: 20px;
+    background-color: #3A6D8C;
+    color: #EAD8B1;
+    padding: 10px 20px;
+    border-bottom: 2px solid #6A9AB0;
+    width: calc(100% + 50px);
+    font-size: 60px;
+}
+    
     .sidebar {
-        transform: translateX(-100%); /* La barra lateral se oculta por defecto en móviles */
+        transform: translateX(-100%);
     }
 
     .content {
-        margin-left: 0; /* La barra lateral ya no ocupa espacio */
+        margin-left: 0;
         padding: 20px;
     }
 }
