@@ -209,16 +209,7 @@
 			z-index: 2000;
 		}
 
-		.sticky {
-			position: sticky;
-			top: -10px;
-			background-color: #3A6D8C;
-			color: #EAD8B1;
-			padding: 10px 20px;
-			border-bottom: 2px solid #6A9AB0;
-			width: calc(100% + 50px);
-			font-size: 60px;
-		}
+		
 
 		.sidebar {
 			transform: translateX(-100%);
