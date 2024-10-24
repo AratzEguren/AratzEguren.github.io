@@ -13,14 +13,14 @@ body {
 }
 
 .toggle-button {
-    display: none; /* Oculta el botón por defecto */
+    display: none; /* El botón solo se muestra en pantallas pequeñas */
     position: fixed;
     top: 10px;
     left: 10px;
     z-index: 100;
     font-size: 24px;
-    background-color: #3A6D8C; /* Azul grisáceo */
-    color: #EAD8B1; /* Texto beige claro */
+    background-color: #3A6D8C;
+    color: #EAD8B1;
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -45,7 +45,7 @@ body {
 }
 
 .sidebar.closed {
-    transform: translateX(-100%); /* Mueve la barra lateral fuera de la pantalla */
+    transform: translateX(-100%); /* Oculta la barra lateral */
 }
 
 .sidebar h1 {
@@ -93,10 +93,10 @@ body {
 .sticky {
     position: sticky;
     top: 0;
-    background-color: #3A6D8C; /* Azul grisáceo */
-    color: #EAD8B1; /* Texto beige claro */
+    background-color: #3A6D8C;
+    color: #EAD8B1;
     padding: 10px 20px;
-    border-bottom: 2px solid #6A9AB0; /* Azul suave */
+    border-bottom: 2px solid #6A9AB0;
     margin-left: -50px;
     width: calc(100% + 50px);
     font-size: 60px;
@@ -105,7 +105,7 @@ body {
 .content h2 {
     font-size: 24px;
     margin-top: 20px;
-    color: #001F3F; /* Azul oscuro */
+    color: #001F3F;
 }
 
 .project {
@@ -116,9 +116,9 @@ body {
 }
 
 .project img {
-    max-width: 200px; /* Ajusta el tamaño máximo de las imágenes */
+    max-width: 200px;
     height: auto;
-    border: 1px solid #6A9AB0; /* Azul suave */
+    border: 1px solid #6A9AB0;
     border-radius: 5px;
     margin-bottom: 10px;
 }
@@ -130,17 +130,17 @@ body {
 .description h3 {
     font-size: 22px;
     margin-bottom: 10px;
-    color: #001F3F; /* Azul oscuro */
+    color: #001F3F;
 }
 
 .description p {
     font-size: 16px;
-    color: #555; /* Gris oscuro */
+    color: #555;
 }
 
 footer {
-    background-color: #001F3F; /* Azul oscuro */
-    color: #EAD8B1; /* Texto beige claro */
+    background-color: #001F3F;
+    color: #EAD8B1;
     text-align: center;
     padding: 10px;
     width: 100%;
@@ -148,28 +148,36 @@ footer {
 }
 
 a {
-    color: #F6EFBD; /* Azul grisáceo */
+    color: #F6EFBD;
     text-decoration: none;
     font-weight: bold;
 }
 
 a:hover {
-    color: #E4C087; /* Azul suave */
+    color: #E4C087;
     text-decoration: underline;
 }
 
 a:active {
-    color: #001F3F; /* Azul oscuro */
+    color: #001F3F;
 }
 
 a:visited {
-    color: #6A9AB0; /* Azul suave */
+    color: #6A9AB0;
 }
 
 /* Diseño para pantallas pequeñas */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .toggle-button {
         display: block; /* Muestra el botón en pantallas pequeñas */
+    }
+
+    .sidebar {
+        transform: translateX(-100%); /* Oculta la barra por defecto en pantallas pequeñas */
+    }
+
+    .sidebar.closed {
+        transform: translateX(0); /* Muestra la barra cuando el toggle está activo */
     }
 
     .content {
@@ -184,34 +192,10 @@ a:visited {
     }
 
     .project img {
-        max-width: 100%; /* Mantiene el tamaño de las imágenes en pantallas pequeñas */
+        max-width: 100%;
     }
 
     footer {
         font-size: 14px;
-    }
-}
-
-/* Diseño para pantallas muy pequeñas (teléfonos) */
-@media (max-width: 480px) {
-    .sidebar h1 {
-        font-size: 18px;
-    }
-
-    .sidebar h2 {
-        font-size: 16px;
-    }
-
-    .sticky {
-        font-size: 24px;
-        padding: 10px;
-    }
-
-    .description p {
-        font-size: 14px;
-    }
-
-    footer {
-        padding: 8px;
     }
 }
