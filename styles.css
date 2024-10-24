@@ -171,6 +171,7 @@ a:visited {
 @media (max-width: 1024px) {
     .toggle-button {
         display: block; /* Muestra el botón en pantallas pequeñas */
+		 z-index: 200;
     }
 
     .sidebar {
@@ -203,6 +204,7 @@ a:visited {
 @media (max-width: 768px) {
     .toggle-button {
         display: block; /* Mostrar el botón en pantallas pequeñas */
+		 z-index: 200;
     }
 
     /* Ajustar la barra lateral */
