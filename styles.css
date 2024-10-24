@@ -203,7 +203,8 @@ a:visited {
 }
 @media (max-width: 768px) {
     .toggle-button {
-        display: block; /* Mostrar el botón en pantallas pequeñas */
+        display: block;
+background-color:red;		/* Mostrar el botón en pantallas pequeñas */
 		 z-index: 2000;
     }
 
