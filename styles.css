@@ -79,8 +79,8 @@ body {
 }
 
 .content {
-    margin-left: 320px;
-    padding: 20px;
+       margin-left: 300px; /* Asegúrate de que coincide con el ancho del sidebar */
+    padding: 30px; /* Ajusta el padding según sea necesario */
     flex-grow: 1;
     background-color: #FFFFFF;
 }
@@ -93,6 +93,7 @@ body {
 .sticky {
     position: sticky;
     top: 0;
+	 text-align: center;
     background-color: #3A6D8C;
     color: #EAD8B1;
     padding: 10px 20px;
@@ -201,35 +202,42 @@ a:visited {
         font-size: 14px;
     }
 }
-
 @media (max-width: 768px) {
     .toggle-button {
         display: block;
         border-radius: 25%;
         background-color: #3A6D8C;
         z-index: 2000;
-        top: 60px; /* Ajuste para pantallas pequeñas */
+        top: 70px;
+		left: 25px; /* Ajusta esto para mover el botón más a la derecha */
     }
 
     .sticky {
-        top: 40px; /* Ajuste para que no suba demasiado en pantallas pequeñas */
-        font-size: 36px;
+	position: sticky;
+    top: 60px; /* Mantener el ajuste del sticky */
+    background-color: #3A6D8C;
+    color: #EAD8B1;
+    padding: 10px 20px; /* Puedes ajustar el padding según sea necesario */
+    border-bottom: 2px solid #6A9AB0;
+    width: calc(100% - 40px); /* Ancho total menos el margen (20px a cada lado) */
+    margin: 0 auto; /* Centrar el sticky */
+    font-size: 36px; /* Ajusta el tamaño de fuente si es necesario */
+    text-align: center; /* Centrar el texto */
     }
 
     .sidebar {
         transform: translateX(-100%);
-		margin-left: -10;
+        margin-left: 0; /* Elimina margen izquierdo adicional */
     }
 
     .content {
-        margin-left: 0;
+        margin-left: 0; /* Sin margen izquierdo */
         padding: 20px;
-		
         width: 100%; /* El contenido ahora se ajusta al tamaño de la pantalla */
     }
-    
+
     .content h2 {
-        font-size: 22px; /* Ajuste del título "Portfolio" */
-		 margin-left: 20;
+        font-size: 22px;
+        margin-left: 0; /* Evitar margen en pantallas pequeñas */
     }
 }
