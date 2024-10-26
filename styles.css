@@ -15,7 +15,7 @@ body {
 .toggle-button {
     display: none;
     position: fixed;
-    top: 50px; 
+    top: 50px;
     left: 10px;
     z-index: 100;
     font-size: 24px;
@@ -79,10 +79,14 @@ body {
 }
 
 .content {
-       margin-left: 300px; /* Asegúrate de que coincide con el ancho del sidebar */
-    padding: 30px; /* Ajusta el padding según sea necesario */
+    margin-left: 300px;
+    padding: 30px;
     flex-grow: 1;
     background-color: #FFFFFF;
+}
+
+.spacer {
+    height: 100px;
 }
 
 .separator {
@@ -93,7 +97,7 @@ body {
 .sticky {
     position: sticky;
     top: 0;
-	 text-align: center;
+    text-align: center;
     background-color: #3A6D8C;
     color: #EAD8B1;
     padding: 10px 20px;
@@ -105,7 +109,6 @@ body {
 
 .content h2 {
     font-size: 24px;
-    margin-top: 20px;
     color: #001F3F;
 }
 
@@ -117,11 +120,12 @@ body {
 }
 
 .project img {
-    max-width: 200px;
+    max-width: calc(100% - 250px);
     height: auto;
     border: 1px solid #6A9AB0;
     border-radius: 5px;
     margin-bottom: 10px;
+    align-items: center;
 }
 
 .description {
@@ -167,10 +171,9 @@ a:visited {
     color: #6A9AB0;
 }
 
-/* Media queries */
 @media (max-width: 1024px) {
     .toggle-button {
-        display: block; 
+        display: block;
         z-index: 2000;
     }
 
@@ -179,7 +182,7 @@ a:visited {
     }
 
     .sidebar.closed {
-        transform: translateX(0); 
+        transform: translateX(0);
     }
 
     .content {
@@ -191,7 +194,7 @@ a:visited {
         font-size: 40px;
         width: 100%;
         margin-left: 0;
-        top: 40px; /* Ajuste para evitar que suba mucho en pantallas medianas */
+        top: 40px;
     }
 
     .project img {
@@ -202,6 +205,7 @@ a:visited {
         font-size: 14px;
     }
 }
+
 @media (max-width: 768px) {
     .toggle-button {
         display: block;
@@ -209,35 +213,35 @@ a:visited {
         background-color: #3A6D8C;
         z-index: 2000;
         top: 70px;
-		left: 25px; /* Ajusta esto para mover el botón más a la derecha */
+        left: 25px;
     }
 
     .sticky {
-	position: sticky;
-    top: 60px; /* Mantener el ajuste del sticky */
-    background-color: #3A6D8C;
-    color: #EAD8B1;
-    padding: 10px 20px; /* Puedes ajustar el padding según sea necesario */
-    border-bottom: 2px solid #6A9AB0;
-    width: calc(100% - 40px); /* Ancho total menos el margen (20px a cada lado) */
-    margin: 0 auto; /* Centrar el sticky */
-    font-size: 36px; /* Ajusta el tamaño de fuente si es necesario */
-    text-align: center; /* Centrar el texto */
+        position: sticky;
+        top: 60px;
+        background-color: #3A6D8C;
+        color: #EAD8B1;
+        padding: 10px 20px;
+        border-bottom: 2px solid #6A9AB0;
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        font-size: 36px;
+        text-align: center;
     }
 
     .sidebar {
         transform: translateX(-100%);
-        margin-left: 0; /* Elimina margen izquierdo adicional */
+        margin-left: 0;
     }
 
     .content {
-        margin-left: 0; /* Sin margen izquierdo */
+        margin-left: 0;
         padding: 20px;
-        width: 100%; /* El contenido ahora se ajusta al tamaño de la pantalla */
+        width: 100%;
     }
 
     .content h2 {
         font-size: 22px;
-        margin-left: 0; /* Evitar margen en pantallas pequeñas */
+        margin-left: 0;
     }
 }
